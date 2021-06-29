@@ -4,13 +4,13 @@ import Vuex from 'vuex';
 Vue.use( Vuex )
 const store = new Vuex.Store({
     state: {
-        todos: [{ id: 1, name: "Shopping at 7", done: true }, { id: 2, name: "Learn vuex", done: true }, { id: 3, name: "Gaming", done: false }],
+        todo: [{ id: 1, name: "Shopping at 7", done: true }, { id: 2, name: "Learn vuex", done: true }, { id: 3, name: "Gaming", done: false }],
 
         count: 0
     },
     getters: {
         doneTodos: state => {
-            return state.todos.filter( todo => todo.done )
+            return state.todo.filter( todo => todo.done )
         }
     },
     mutations: {
